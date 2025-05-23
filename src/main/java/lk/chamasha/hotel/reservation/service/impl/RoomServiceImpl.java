@@ -4,6 +4,7 @@ package lk.chamasha.hotel.reservation.service.impl;
 import lk.chamasha.hotel.reservation.controller.request.RoomRequest;
 import lk.chamasha.hotel.reservation.controller.response.RoomResponse;
 import lk.chamasha.hotel.reservation.model.Room;
+import lk.chamasha.hotel.reservation.repository.RoomRepository;
 import lk.chamasha.hotel.reservation.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,7 @@ import java.util.stream.Collectors;
 public class RoomServiceImpl implements RoomService {
 
     @Autowired
-    private Room roomRepository;
+    private RoomRepository roomRepository;
 
     @Override
     public RoomResponse createRoom(RoomRequest request) {
